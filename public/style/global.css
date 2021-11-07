@@ -32,9 +32,9 @@
 .text.__title + .text.__subtitle:not(.--no-margin) {
 	margin-top: calc(-1 * var(--sp-m));
 }
-.text.text.--no-margin {
-	margin: 0;
-}
+.text.text.--strong { font-weight: var(--f-w-bold);}
+.text.text.--no-margin { margin: 0; }
+.text.text.--large { font-size: var(--f-s-l); }
 
 /*** lists ***/
 .definition-list.__wrapper {

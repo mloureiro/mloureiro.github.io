@@ -109,6 +109,8 @@ export default {
 
 .theme.--light {
 	--c-text: var(--palette-space-cadet);
+	--c-text-light: var(--palette-space-cadet-light);
+	--c-text-dark: var(--palette-space-cadet-dark);
 	--c-background: var(--palette-alice-blue);
 	--c-text-inverted: var(--palette-alice-blue);
 	--c-background-inverted: var(--palette-tangerine);
@@ -148,6 +150,8 @@ export default {
 
 .theme.--dark {
 	--c-text: var(--palette-alice-blue);
+	--c-text-light: var(--palette-alice-blue-light);
+	--c-text-dark: var(--palette-alice-blue-dark);
 	--c-background: var(--palette-space-cadet);
 	--c-text-inverted: var(--palette-tangerine);
 	--c-background-inverted: var(--palette-alice-blue);
