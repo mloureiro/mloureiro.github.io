@@ -1,11 +1,13 @@
 ---
 import BaseLayout from '../layout/base-layout.astro';
+import Button from '../components/button.vue';
 
 const sections = {
 	colors: { id: 'colors', label: 'Colors' },
 	colorPalette: { id: 'color-palette', label: 'Color palette', parent: 'colors' },
 	colorUsages: { id: 'color-usages', label: 'Color usages', parent: 'colors' },
 	typography: { id: 'typography', label: 'Typography' },
+	buttons: { id: 'buttons', label: 'Buttons' },
 };
 ---
 
@@ -119,6 +121,16 @@ const sections = {
 	.color.--hex {
 		font-family: var(--f-mono);
 		font-size: var(--f-s-xs);
+	}
+
+	.button.--wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 calc(-1 * var(--sp-m));
+	}
+
+	.button.--element {
+		margin: 0 calc(var(--sp-m) / 2) var(--sp-m);
 	}
 </style>
 
@@ -360,5 +372,16 @@ const sections = {
 			<dt class="definition-list --key">Paragraph</dt>
 			<dd class="definition-list --value"><p class="text --no-margin">Paragraph</p></dd>
 		</dl>
+
+		<h2 id={sections.buttons.id} class="text --section">{sections.buttons.label}</h2>
+
+		<section class="button --wrapper">
+			<Button primary class="button --element">Primary</Button>
+			<Button secondary class="button --element">Secondary</Button>
+			<Button success class="button --element">Success</Button>
+			<Button danger class="button --element">Danger</Button>
+			<Button warning class="button --element">Warning</Button>
+			<Button info class="button --element">Info</Button>
+		</section>
 	</article>
 </BaseLayout>
