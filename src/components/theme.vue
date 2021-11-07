@@ -10,8 +10,12 @@
 					<input v-model="isLightTheme" type="checkbox" class="theme-toggle __checkbox" />
 					<span class="theme-toggle __toggle"></span>
 					<span class="theme-toggle __names">
-						<span class="theme-toggle __light">light</span>
-						<span class="theme-toggle __dark">dark</span>
+						<span class="theme-toggle __light">
+							<img src="icons/icon-sun.svg" alt="sun" class="theme-toggle __icon">
+						</span>
+						<span class="theme-toggle __dark">
+							<img src="icons/icon-moon.svg" alt="moon" class="theme-toggle __icon">
+						</span>
 					</span>
 				</label>
 			</span>
@@ -209,7 +213,7 @@ export default {
 
 .theme-toggle.__content {
 	--toggle-height: 1.5rem;
-	--toggle-width: 4rem;
+	--toggle-width: 2rem;
 	display: flex;
 	margin: var(--sp-m);
 }
@@ -246,6 +250,10 @@ export default {
 	display: flex;
 	justify-content: space-between;
 	user-select: none;
+}
+
+.theme-toggle.__icon {
+	width: calc(0.8 * var(--toggle-height))
 }
 
 .theme-toggle.__checkbox {
