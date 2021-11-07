@@ -121,6 +121,10 @@ export default {
 .theme {
 	min-width: 100vw;
 	min-height: 100vh;
+	/* workaround for having the pages with full height (without extra scrollbar)
+	 * astro adds wrapper templates that do not have styles and I haven't figured it
+	 * out yet if it is possible */
+	--header-height: 4rem;
 }
 
 .theme.--light {
@@ -209,6 +213,7 @@ export default {
 .theme-toggle.__wrapper {
 	display: flex;
 	justify-content: right;
+	height: var(--header-height);
 }
 
 .theme-toggle.__content {
