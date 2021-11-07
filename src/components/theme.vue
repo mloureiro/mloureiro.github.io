@@ -3,8 +3,20 @@
 		:class="[isLightTheme ? '--light' : '--dark']"
 		class="theme"
 	>
-		<!-- TODO remove the theme changer test button -->
-		<button @click="isLightTheme = !isLightTheme">Toggle theme</button>
+
+		<div class="theme-toggle __wrapper">
+			<span class="theme-toggle __content">
+				<label class="theme-toggle __label">
+					<input v-model="isLightTheme" type="checkbox" class="theme-toggle __checkbox" />
+					<span class="theme-toggle __toggle"></span>
+					<span class="theme-toggle __names">
+						<span class="theme-toggle __light">light</span>
+						<span class="theme-toggle __dark">dark</span>
+					</span>
+				</label>
+			</span>
+		</div>
+
 		<slot />
 	</div>
 </template>
@@ -188,4 +200,67 @@ export default {
 	color: var(--c-text);
 	background-color: var(--c-background);
 }
+
+/** toggle **/
+.theme-toggle.__wrapper {
+	display: flex;
+	justify-content: right;
+}
+
+.theme-toggle.__content {
+	--toggle-height: 1.5rem;
+	--toggle-width: 4rem;
+	display: flex;
+	margin: var(--sp-m);
+}
+
+.theme-toggle.__label, .theme-toggle.__toggle {
+	height: var(--toggle-height);
+	border-radius: 100px;
+}
+
+.theme-toggle.__label {
+	width: calc(2 * var(--toggle-width));
+	background-color: rgba(0,0,0,.1);
+	border-radius: 100px;
+	position: relative;
+	cursor: pointer;
+}
+
+.theme-toggle.__toggle {
+	position: absolute;
+	width: 50%;
+	background-color: var(--palette-alice-blue-dark);
+	box-shadow: 0 2px 15px rgba(0,0,0,.15);
+	transition: transform .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.theme-toggle.__names {
+	font-size: var(--f-s-s);
+	font-weight: var(--f-w-medium);
+	width: calc(2 * var(--toggle-width));
+	padding:
+		calc(0.10 * var(--toggle-height))
+		calc(0.30 * var(--toggle-width));
+	position: absolute;
+	display: flex;
+	justify-content: space-between;
+	user-select: none;
+}
+
+.theme-toggle.__checkbox {
+	display: none;
+}
+
+.theme.--dark .theme-toggle.__toggle{
+	transform: translateX(100%);
+	background-color: var(--palette-space-cadet-light);
+}
+
+.theme-toggle.__dark,
+.theme.--dark .theme-toggle.__light {
+	opacity: .5;
+}
+
+.theme.--dark .theme-toggle.__dark { opacity: 1; }
 </style>
