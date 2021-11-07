@@ -1,6 +1,35 @@
 ---
 import BaseLayout from '../layout/base-layout.astro'
+import ProfilePicture from '../components/profile-picture.vue';
 ---
+
+<style>
+.home.__content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+.profile.__sentence {
+	font-size: var(--f-s-xxl);
+	font-weight: var(--f-w-bold);
+}
+.profile.__sentence.--large { font-size: calc(1.5 * var(--f-s-xxl)); }
+.profile.__sentence.--first { color: var(--c-text-light); }
+.profile.__sentence.--second { color: var(--c-text-dark); }
+</style>
+
 <BaseLayout title="Homepage">
-	Hello world
+	<main class="home __content">
+		<ProfilePicture />
+		<span class="text __code profile __sentence">
+			<span class="profile __sentence --first --large">marcos</span>
+			<span class="profile __sentence --second --large">loureiro</span>
+		</span>
+		<span class="text __code profile __sentence">
+			<span class="profile __sentence --first">software</span>
+			<span class="profile __sentence --second">engineer</span>
+		</span>
+	</main>
 </BaseLayout>
