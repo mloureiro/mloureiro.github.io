@@ -250,7 +250,7 @@ export default {
 	width: calc(2 * var(--toggle-width));
 	padding:
 		calc(0.10 * var(--toggle-height))
-		calc(0.30 * var(--toggle-width));
+		calc(0.20 * var(--toggle-width));
 	position: absolute;
 	display: flex;
 	justify-content: space-between;
