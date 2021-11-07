@@ -1,3 +1,12 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Homepage</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link href="/style/reset.css" rel="stylesheet"></head><body>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Homepage</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link href="https://fonts.googleapis.com/css2?family=B612+Mono:ital,wght@0,400;0,700;1,400&amp;family=Dosis:wght@400;600;700&amp;family=Pacifico&amp;display=swap" rel="stylesheet"><link href="/style/reset.css" rel="stylesheet"><link href="/style/global.css" rel="stylesheet"><link rel="stylesheet" href="/_astro/common-Z1XPVc8.css" type="text/css"><style type="text/css">astro-root, astro-fragment { display: contents; }</style></head><body><astro-root uid="ZJRGhv"><div class="--light theme"><!-- TODO remove the theme changer test button --><button>Toggle theme</button><!--[--><astro-fragment>
 	Hello world
-</body></html>
+</astro-fragment><!--]--></div></astro-root>
+<script type="module">
+import setup from '/_astro_frontend/hydrate/load.js';
+setup("ZJRGhv", {}, async () => {
+  
+  const [{ default: Component }, { default: hydrate }] = await Promise.all([import("/_astro/src/components/theme.vue.js"), import("/_snowpack/pkg/@astrojs.renderer-vue.client.v0.1.9.js")]);
+  return (el, children) => hydrate(el)(Component, {}, children);
+
+});
+</script></body></html>

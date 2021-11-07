@@ -1,28 +1,72 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
+/*** BOXES ***/
+.box{
+	padding: var(--sp-l) var(--sp-m);
 }
 
-:root {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
-  font-size: 1rem;
-  --user-font-scale: 1rem - 16px;
-  font-size: clamp(0.875rem, 0.4626rem + 1.0309vw + var(--user-font-scale), 1.125rem);
+/*** TEXT ***/
+.text {}
+.text.--strong {
+	font-weight: var(--f-w-bold);
+}
+.text.--title {
+	font-family: var(--f-cursive);
+	font-size: var(--f-s-xxl);
+	font-weight: var(--f-w-bold);
+	margin: var(--sp-xl) 0 var(--sp-l);
+}
+.text.--subtitle {
+	font-size: var(--f-s-l);
+	font-weight: var(--f-w-medium);
+	margin: var(--sp-l) 0 var(--sp-m);
+}
+.text.--title + .text.--subtitle:not(.--no-margin) {
+	margin-top: calc(-1 * var(--sp-m));
+}
+.text.--section {
+	font-family: var(--f-cursive);
+	font-size: var(--f-s-xl);
+	font-weight: var(--f-w-medium);
+	margin: var(--sp-l) 0 var(--sp-m);
+}
+.text.text.--no-margin {
+	margin: 0;
 }
 
-body {
-  padding: 4rem 2rem;
-  width: 100%;
-  min-height: 100vh;
-  display: grid;
-  justify-content: center;
-  background: #f9fafb;
-  color: #111827;
+/*** lists ***/
+.definition-list.--wrapper {
+	display: flex;
+	flex-flow: row wrap;
+	border: var(--b-standard-basic);
+	--definition-list-key-width: 30%;
+	--definition-list-value-width: 70%
+}
+.definition-list.--key {
+	display: flex;
+	align-items: center;
+	justify-content: right;
+	flex-basis: var(--definition-list-key-width);
+	padding: var(--sp-xs) var(--sp-s);
+	background: var(--c-background-inverted);
+	color: var(--c-text-inverted);
+}
+.definition-list.--value {
+	display: flex;
+	align-items: center;
+	flex-basis: var(--definition-list-value-width);
+	flex-grow: 1;
+	margin: 0;
+	padding: var(--sp-xs) var(--sp-s);
+	border-bottom: var(--b-standard-basic);
+}
+.definition-list.--value:last-of-type {
+	border-bottom: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    background: #111827;
-    color: #fff;
-  }
+/*** utilities ***/
+.separator {
+	border-top: var(--b-standard-basic);
+	border-width: var(--b-width-regular) 0 0 0;
+	margin: var(--sp-l) auto var(--sp-l);
+	width: 80%;
+	text-align: center
 }
