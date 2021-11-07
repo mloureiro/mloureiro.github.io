@@ -230,7 +230,7 @@ export default {
 .theme-toggle.__toggle {
 	position: absolute;
 	width: 50%;
-	background-color: var(--palette-alice-blue-dark);
+	background-color: var(--palette-alice-blue);
 	box-shadow: 0 2px 15px rgba(0,0,0,.15);
 	transition: transform .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
