@@ -98,6 +98,11 @@ export default {
 	font-size: 16px;
 }
 
+.theme {
+	min-width: 100vw;
+	min-height: 100vh;
+}
+
 .theme.--light {
 	--c-text: var(--palette-space-cadet);
 	--c-background: var(--palette-alice-blue);
