@@ -5,6 +5,7 @@ const sections = {
 	colors: { id: 'colors', label: 'Colors' },
 	colorPalette: { id: 'color-palette', label: 'Color palette', parent: 'colors' },
 	colorUsages: { id: 'color-usages', label: 'Color usages', parent: 'colors' },
+	typography: { id: 'typography', label: 'Typography' },
 };
 ---
 
@@ -37,6 +38,8 @@ const sections = {
 	.u-c-selective-yellow-light { background-color: var(--palette-selective-yellow-light); }
 	.u-c-selective-yellow-dark { background-color: var(--palette-selective-yellow-dark); }
 	.u-c-light-gray { background-color: var(--palette-light-gray); }
+	.u-c-light-gray-light { background-color: var(--palette-light-gray-light); }
+	.u-c-light-gray-dark { background-color: var(--palette-light-gray-dark); }
 	.u-c-light-grayish-blue { background-color: var(--palette-light-grayish-blue); }
 
 	.u-c-text { background-color: var(--c-text); }
@@ -55,10 +58,6 @@ const sections = {
 	.u-c-info-fg { background-color: var(--c-info-fg); }
 	.u-c-info-bg { background-color: var(--c-info-bg); }
 
-	.section {
-		padding: var(--sp-m);
-	}
-
 	.color-row {
 		--color-size: 30px;
 		--color-margin: var(--sp-m);
@@ -71,7 +70,7 @@ const sections = {
 		display: flex;
 		flex: 1 1 25%;
 		align-items: center;
-		margin: var(--sp-m);
+		margin: 0 var(--sp-m) var(--sp-m);
 		min-width: 150px;
 	}
 	.color.--pill-wrapper {
@@ -124,16 +123,14 @@ const sections = {
 </style>
 
 <BaseLayout title="Theming">
-	<header class="section">
+	<article class="box">
 		<h1 class="text --title">Theming</h1>
 		<p class="text --subtitle">Color pallet, fonts, sizes and spacings used for this website.</p>
-	</header>
 
-	<section class="section">
 		<h2 id={sections.colors.id} class="text --section">{sections.colors.label}</h2>
 
-		<h3 id={sections.colorPalette.id} class="text subtitle">{sections.colorPalette.label}</h3>
-		<div class="color-row">
+		<h3 id={sections.colorPalette.id} class="text --subsection">{sections.colorPalette.label}</h3>
+		<section class="color-row">
 			<div class="color --wrapper">
 				<div class="color --pill-wrapper">
 					<div class="color --pill u-c-space-cadet-dark"></div>
@@ -243,8 +240,10 @@ const sections = {
 			</div>
 
 			<div class="color --wrapper">
-				<div class="color --dot-wrapper">
-					<div class="color --dot u-c-light-gray"></div>
+				<div class="color --pill-wrapper">
+					<div class="color --pill u-c-light-gray-dark"></div>
+					<div class="color --pill u-c-light-gray"></div>
+					<div class="color --pill u-c-light-gray-light"></div>
 				</div>
 				<div class="color --name-wrapper">
 					<p class="color --name">Light gray</p>
@@ -260,11 +259,11 @@ const sections = {
 					<p class="color --name">Grayish blue</p>
 				</div>
 			</div>
-		</div>
+		</section>
 
-		<h3 id={sections.colorUsages.id} class="text subtitle">{sections.colorUsages.label}</h3>
+		<h3 id={sections.colorUsages.id} class="text --subsection">{sections.colorUsages.label}</h3>
 
-		<div class="color-row">
+		<section class="color-row">
 			<div class="color --wrapper">
 				<div class="color --dot-wrapper"><div class="color --dot u-c-text"></div></div>
 				<div class="color --name-wrapper">
@@ -345,6 +344,21 @@ const sections = {
 					<p class="color --hex"></p>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
+
+		<h2 id={sections.typography.id} class="text --section">{sections.typography.label}</h2>
+
+		<dl class="definition-list --wrapper">
+			<dt class="definition-list --key">Title</dt>
+			<dd class="definition-list --value"><p class="text --title --no-margin">Title</p></dd>
+			<dt class="definition-list --key">Subtitle</dt>
+			<dd class="definition-list --value"><p class="text --subtitle --no-margin">Sub title</p></dd>
+			<dt class="definition-list --key">Section</dt>
+			<dd class="definition-list --value"><p class="text --section --no-margin">Section</p></dd>
+			<dt class="definition-list --key">Sub section</dt>
+			<dd class="definition-list --value"><p class="text --subsection --no-margin">Sub section</p></dd>
+			<dt class="definition-list --key">Paragraph</dt>
+			<dd class="definition-list --value"><p class="text --no-margin">Paragraph</p></dd>
+		</dl>
+	</article>
 </BaseLayout>

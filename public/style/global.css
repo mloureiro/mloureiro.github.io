@@ -14,19 +14,26 @@
 	font-weight: var(--f-w-bold);
 	margin: var(--sp-xl) 0 var(--sp-l);
 }
+.text.--section {
+	font-family: var(--f-cursive);
+	font-size: var(--f-s-xl);
+	font-weight: var(--f-w-medium);
+	margin: var(--sp-l) 0 var(--sp-m);
+}
+.text.--subsection {
+	font-family: var(--f-cursive);
+	font-size: var(--f-s-l);
+	font-weight: var(--f-w-medium);
+	margin: var(--sp-l) 0 var(--sp-m);
+}
 .text.--subtitle {
+	font-family: var(--f-sans);
 	font-size: var(--f-s-l);
 	font-weight: var(--f-w-medium);
 	margin: var(--sp-l) 0 var(--sp-m);
 }
 .text.--title + .text.--subtitle:not(.--no-margin) {
 	margin-top: calc(-1 * var(--sp-m));
-}
-.text.--section {
-	font-family: var(--f-cursive);
-	font-size: var(--f-s-xl);
-	font-weight: var(--f-w-medium);
-	margin: var(--sp-l) 0 var(--sp-m);
 }
 .text.text.--no-margin {
 	margin: 0;
@@ -37,8 +44,8 @@
 	display: flex;
 	flex-flow: row wrap;
 	border: var(--b-standard-basic);
-	--definition-list-key-width: 30%;
-	--definition-list-value-width: 70%
+	--definition-list-key-width: 25%;
+	--definition-list-value-width: 75%
 }
 .definition-list.--key {
 	display: flex;
