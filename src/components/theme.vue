@@ -18,6 +18,8 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=B612+Mono:ital,wght@0,400;0,700;1,400&family=Dosis:wght@400;600;700&family=Pacifico&display=swap');
+
 :root {
 	/* color palette
 			regular:   https://coolors.co/2b2d42-8d99ae-edf2f4-f7ec59-e71d36-f08700-157145-44cf6c-ffba08-f8f9fa
