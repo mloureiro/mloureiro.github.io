@@ -3,7 +3,8 @@ import BaseLayout from '../layout/base-layout.astro';
 
 const sections = {
 	colors: { id: 'colors', label: 'Colors' },
-	colorPalette: { id: 'color-palette', label: 'Palette', parent: 'colors' },
+	colorPalette: { id: 'color-palette', label: 'Color palette', parent: 'colors' },
+	colorUsages: { id: 'color-usages', label: 'Color usages', parent: 'colors' },
 };
 ---
 
@@ -37,6 +38,22 @@ const sections = {
 	.u-c-selective-yellow-dark { background-color: var(--palette-selective-yellow-dark); }
 	.u-c-light-gray { background-color: var(--palette-light-gray); }
 	.u-c-light-grayish-blue { background-color: var(--palette-light-grayish-blue); }
+
+	.u-c-text { background-color: var(--c-text); }
+	.u-c-background { background-color: var(--c-background); }
+	.u-b-color { background-color: var(--b-color); }
+	.u-c-primary-fg { background-color: var(--c-primary-fg); }
+	.u-c-primary-bg { background-color: var(--c-primary-bg); }
+	.u-c-secondary-fg { background-color: var(--c-secondary-fg); }
+	.u-c-secondary-bg { background-color: var(--c-secondary-bg); }
+	.u-c-success-fg { background-color: var(--c-success-fg); }
+	.u-c-success-bg { background-color: var(--c-success-bg); }
+	.u-c-danger-fg { background-color: var(--c-danger-fg); }
+	.u-c-danger-bg { background-color: var(--c-danger-bg); }
+	.u-c-warning-fg { background-color: var(--c-warning-fg); }
+	.u-c-warning-bg { background-color: var(--c-warning-bg); }
+	.u-c-info-fg { background-color: var(--c-info-fg); }
+	.u-c-info-bg { background-color: var(--c-info-bg); }
 
 	.section {
 		padding: var(--sp-m);
@@ -79,6 +96,9 @@ const sections = {
 		margin-left: var(--sp-xxs);
 		border-top-right-radius: var(--color-size);
 		border-bottom-right-radius: var(--color-size);
+	}
+	.color.--pill:first-of-type +	.color.--pill:last-of-type {
+		margin-left: 0;
 	}
 	.color.--dot-wrapper {
 		display: inline-block;
@@ -233,9 +253,96 @@ const sections = {
 			</div>
 
 			<div class="color --wrapper">
-				<div class="color --dot-wrapper"><div class="color --dot u-c-light-grayish-blue"></div></div>
+				<div class="color --dot-wrapper">
+					<div class="color --dot u-c-light-grayish-blue"></div>
+				</div>
 				<div class="color --name-wrapper">
 					<p class="color --name">Grayish blue</p>
+				</div>
+			</div>
+		</div>
+
+		<h3 id={sections.colorUsages.id} class="text subtitle">{sections.colorUsages.label}</h3>
+
+		<div class="color-row">
+			<div class="color --wrapper">
+				<div class="color --dot-wrapper"><div class="color --dot u-c-text"></div></div>
+				<div class="color --name-wrapper">
+					<p class="color --name">Text</p>
+				</div>
+			</div>
+
+			<div class="color --wrapper">
+				<div class="color --dot-wrapper"><div class="color --dot u-c-background"></div></div>
+				<div class="color --name-wrapper">
+					<p class="color --name">Background</p>
+				</div>
+			</div>
+
+			<div class="color --wrapper">
+				<div class="color --dot-wrapper"><div class="color --dot u-b-color"></div></div>
+				<div class="color --name-wrapper">
+					<p class="color --name">Borders</p>
+				</div>
+			</div>
+
+			<div class="color --wrapper">
+				<div class="color --dot-wrapper">
+					<div class="color --dot u-c-primary-bg"></div>
+				</div>
+				<div class="color --name-wrapper">
+					<p class="color --name">Primary</p>
+					<p class="color --hex"></p>
+				</div>
+			</div>
+
+			<div class="color --wrapper">
+				<div class="color --dot-wrapper">
+					<div class="color --dot u-c-secondary-bg"></div>
+				</div>
+				<div class="color --name-wrapper">
+					<p class="color --name">Secondary</p>
+					<p class="color --hex"></p>
+				</div>
+			</div>
+
+			<div class="color --wrapper">
+				<div class="color --dot-wrapper">
+					<div class="color --dot u-c-success-bg"></div>
+				</div>
+				<div class="color --name-wrapper">
+					<p class="color --name">Success</p>
+					<p class="color --hex"></p>
+				</div>
+			</div>
+
+			<div class="color --wrapper">
+				<div class="color --dot-wrapper">
+					<div class="color --dot u-c-danger-bg"></div>
+				</div>
+				<div class="color --name-wrapper">
+					<p class="color --name">Danger</p>
+					<p class="color --hex"></p>
+				</div>
+			</div>
+
+			<div class="color --wrapper">
+				<div class="color --dot-wrapper">
+					<div class="color --dot u-c-warning-bg"></div>
+				</div>
+				<div class="color --name-wrapper">
+					<p class="color --name">Warning</p>
+					<p class="color --hex"></p>
+				</div>
+			</div>
+
+			<div class="color --wrapper">
+				<div class="color --dot-wrapper">
+					<div class="color --dot u-c-info-bg"></div>
+				</div>
+				<div class="color --name-wrapper">
+					<p class="color --name">Info</p>
+					<p class="color --hex"></p>
 				</div>
 			</div>
 		</div>
