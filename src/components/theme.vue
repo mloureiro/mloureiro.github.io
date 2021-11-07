@@ -11,10 +11,10 @@
 					<span class="theme-toggle __toggle"></span>
 					<span class="theme-toggle __names">
 						<span class="theme-toggle __light">
-							<img src="icons/icon-sun.svg" alt="sun" class="theme-toggle __icon">
+							<img src="/icons/icon-sun.svg" alt="sun" class="theme-toggle __icon">
 						</span>
 						<span class="theme-toggle __dark">
-							<img src="icons/icon-moon.svg" alt="moon" class="theme-toggle __icon">
+							<img src="/icons/icon-moon.svg" alt="moon" class="theme-toggle __icon">
 						</span>
 					</span>
 				</label>
