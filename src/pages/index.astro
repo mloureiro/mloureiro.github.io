@@ -1,6 +1,16 @@
 ---
 import BaseLayout from '../layout/base-layout.astro'
 import ProfilePicture from '../components/profile-picture.vue';
+import HexagonIcon from '../components/hexagon-icon.vue';
+import HackerRankIcon from '/icons/icon-social-hackerrank.svg'
+
+// TODO add tooltips to the hexagon icon
+/* TODO think about how to deal with the SVGs colors
+	<img src="/icons/icon-social-hackerrank.svg" class="icon">
+	.icon {
+		filter: invert(8%) sepia(100%) saturate(6481%) hue-rotate(246deg) brightness(102%) contrast(143%);
+	}
+*/
 ---
 
 <style>
@@ -18,6 +28,15 @@ import ProfilePicture from '../components/profile-picture.vue';
 .profile.__sentence.--large { font-size: calc(1.5 * var(--f-s-xxl)); }
 .profile.__sentence.--first { color: var(--c-text-light); }
 .profile.__sentence.--second { color: var(--c-text-dark); }
+.hexagon-row {
+	display: flex;
+}
+.hexagon-row.--odd {}
+.hexagon-row.--even {
+	margin-left: calc(1.8rem - 1px);
+	margin-top: -1rem;
+}
+.hexagon-icon { margin: var(--sp-xxs); }
 </style>
 
 <BaseLayout title="Homepage">
@@ -31,5 +50,26 @@ import ProfilePicture from '../components/profile-picture.vue';
 			<span class="profile __sentence --first">software</span>
 			<span class="profile __sentence --second">engineer</span>
 		</span>
+		<div> <!-- avoid parent flex to miss align the hexagons -->
+			<div class="hexagon-row --odd">
+				<a href="https://www.linkedin.com/in/mloureiro/" target="_blank">
+					<HexagonIcon src="/icons/icon-social-linkedin.svg" alt="linkedin" class="hexagon-icon" />
+				</a>
+				<a href="https://github.com/mloureiro/" target="_blank">
+					<HexagonIcon src="/icons/icon-social-github.svg" alt="github" class="hexagon-icon" />
+				</a>
+				<a href="https://www.hackerrank.com/mloureiro/" target="_blank">
+					<HexagonIcon src="/icons/icon-social-hackerrank.svg" alt="hackerrank" class="hexagon-icon" />
+				</a>
+			</div>
+			<div class="hexagon-row --even">
+				<a href="mailto:mloureiro.dev@gmail.com" target="_blank">
+					<HexagonIcon src="/icons/icon-mail.svg" alt="mail" class="hexagon-icon" />
+				</a>
+				<a href="https://twitter.com/mloureiro_dev/" target="_blank">
+					<HexagonIcon src="/icons/icon-social-twitter.svg" alt="twitter" class="hexagon-icon" />
+				</a>
+			</div>
+		</div>
 	</main>
 </BaseLayout>
