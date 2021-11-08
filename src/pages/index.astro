@@ -25,6 +25,9 @@ import { Hexagon, HexagonRow, HexagonWrapper } from '../components/hexagon/index
 	height: 100%;
 	padding: var(--sp-xs);
 }
+:global(.theme.--dark .social-icon.__img) {
+	filter: invert(100);
+}
 </style>
 
 <BaseLayout title="Homepage">
@@ -42,30 +45,30 @@ import { Hexagon, HexagonRow, HexagonWrapper } from '../components/hexagon/index
 			<HexagonRow>
 					<Hexagon style="--color: #9a78b1">
 						<a href="https://www.linkedin.com/in/mloureiro/" target="_blank" class="social-icon">
-							<img src="/icons/icon-social-linkedin.svg" alt="linkedin" class="social-icon"/>
+							<img src="/icons/icon-social-linkedin.svg" alt="linkedin" class="social-icon __img"/>
 						</a>
 					</Hexagon>
-					<Hexagon style="--color: #ffffff">
+					<Hexagon style="--color: #dddddd">
 						<a href="https://github.com/mloureiro/" target="_blank" class="social-icon">
-							<img src="/icons/icon-social-github.svg" alt="github" class="social-icon"/>
+							<img src="/icons/icon-social-github.svg" alt="github" class="social-icon __img"/>
 						</a>
 					</Hexagon>
 					<Hexagon style="--color: #2ec262">
 						<a href="https://www.hackerrank.com/mloureiro/" target="_blank" class="social-icon">
-							<img src="/icons/icon-social-hackerrank.svg" alt="hackerrank" class="social-icon"/>
+							<img src="/icons/icon-social-hackerrank.svg" alt="hackerrank" class="social-icon __img"/>
 						</a>
 					</Hexagon>
 				</HexagonRow>
 				<HexagonRow>
-						<Hexagon style="--color: #cccccc">
+						<Hexagon style="--color: #ea3854">
 							<a href="mailto:mloureiro.dev@gmail.com" target="_blank" class="social-icon">
-								<img src="/icons/icon-mail.svg" alt="mail" class="social-icon"/>
+								<img src="/icons/icon-mail.svg" alt="mail" class="social-icon __img"/>
 							</a>
 						</Hexagon>
 
 						<Hexagon style="--color: #1d9bf0">
 							<a href="https://twitter.com/mloureiro_dev/" target="_blank" class="social-icon">
-								<img src="/icons/icon-social-twitter.svg" alt="twitter" class="social-icon"/>
+								<img src="/icons/icon-social-twitter.svg" alt="twitter" class="social-icon __img"/>
 							</a>
 						</Hexagon>
 				</HexagonRow>
