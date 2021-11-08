@@ -1,8 +1,5 @@
 <template>
-	<div
-		:style="style"
-		class="hexagon __wrapper"
-	>
+	<div class="hexagon __wrapper">
 		<div class="hexagon __content">
 			<slot></slot>
 		</div>
@@ -29,24 +26,9 @@
 	</div>
 </template>
 
-<script>
-export default {
-	props: {
-		colorHover: { type: String, default: null },
-	},
-	computed: {
-		style() {
-			return this.colorHover
-				? `--hexagon-color-hover: ${this.colorHover}`
-				: null;
-		},
-	},
-};
-</script>
-
 <style scoped>
 .hexagon.__wrapper {
-	--hexagon-color-hover: var(--c-primary-bg);
+	--color: var(--c-primary-bg);
 	position: relative;
 }
 .hexagon.__svg {
@@ -65,6 +47,7 @@ export default {
 }
 .hexagon.__svg:hover,
 .hexagon.__content:hover + .hexagon.__svg {
-	fill: var(--hexagon-color-hover);
+	stroke: var(--color);
+	fill: var(--color);
 }
 </style>
