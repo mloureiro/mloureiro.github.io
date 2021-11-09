@@ -34,7 +34,7 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=B612+Mono:ital,wght@0,400;0,700;1,400&family=Dosis:wght@400;600;700&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=B612+Mono:ital,wght@0,400;0,700;1,400&family=Dosis:wght@400;600;700&family=Architects+Daughter&display=swap');
 
 :root {
 	/* color palette
@@ -77,10 +77,10 @@ export default {
 	/* fonts: https://fonts.googleapis.com/css2?family=B612+Mono:ital,wght@0,400;0,700;1,400&family=Dosis:wght@400;600;700&family=Pacifico&display=swap */
 	--b612mono: 'B612 Mono', monospace;
 	--dosis: 'Dosis', sans-serif;
-	--pacifico: 'Pacifico', cursive;
+	--architects: 'Architects Daughter', cursive;
 
 	/*** theme ***/
-	--f-cursive: var(--pacifico);
+	--f-cursive: var(--architects);
 	--f-sans: var(--dosis);
 	--f-mono: var(--b612mono);
 	--f-w-regular: 400;
