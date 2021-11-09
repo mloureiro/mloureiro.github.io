@@ -2,6 +2,11 @@
 import BaseLayout from '../layout/base-layout.astro'
 import ProfilePicture from '../components/profile-picture.vue';
 import { Hexagon, HexagonRow, HexagonWrapper } from '../components/hexagon/index.js';
+import GitHubIcon from '../components/social-icon/github.vue';
+import HackerRankIcon from '../components/social-icon/hackerrank.vue';
+import LinkedInIcon from '../components/social-icon/linkedin.vue';
+import MailIcon from '../components/social-icon/mail.vue';
+import TwitterIcon from '../components/social-icon/twitter.vue';
 ---
 
 <style>
@@ -11,6 +16,14 @@ import { Hexagon, HexagonRow, HexagonWrapper } from '../components/hexagon/index
 	align-items: center;
 	justify-content: center;
 	min-height: calc(100vh - var(--header-height));
+}
+.section {
+	margin-bottom: var(--sp-m);
+}
+.section.__name {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 .profile.__sentence {
 	font-size: var(--f-s-xxl);
@@ -24,53 +37,54 @@ import { Hexagon, HexagonRow, HexagonWrapper } from '../components/hexagon/index
 	width: 100%;
 	height: 100%;
 	padding: var(--sp-xs);
-}
-:global(.theme.--dark .social-icon.__img) {
-	filter: invert(100);
+	stroke: var(--c-text-light);
+	fill: var(--c-text-light);
 }
 </style>
 
 <BaseLayout title="Homepage">
 	<main class="home __content">
 		<ProfilePicture />
-		<span class="text __code profile __sentence">
-			<span class="profile __sentence --first --large">marcos</span>
-			<span class="profile __sentence --second --large">loureiro</span>
-		</span>
-		<span class="text __code profile __sentence">
-			<span class="profile __sentence --first">software</span>
-			<span class="profile __sentence --second">engineer</span>
-		</span>
-		<HexagonWrapper>
+		<div class="section __name">
+			<span class="text __code profile __sentence">
+				<span class="profile __sentence --first --large">marcos</span>
+				<span class="profile __sentence --second --large">loureiro</span>
+			</span>
+			<span class="text __code profile __sentence">
+				<span class="profile __sentence --first">software</span>
+				<span class="profile __sentence --second">engineer</span>
+			</span>
+		</div>
+		<HexagonWrapper class="section">
 			<HexagonRow>
 					<Hexagon style="--color: #9a78b1">
 						<a href="https://www.linkedin.com/in/mloureiro/" target="_blank" class="social-icon">
-							<img src="/icons/icon-social-linkedin.svg" alt="linkedin" class="social-icon __img"/>
+							<LinkedInIcon class="social-icon" />
 						</a>
 					</Hexagon>
 					<Hexagon style="--color: #dddddd">
 						<a href="https://github.com/mloureiro/" target="_blank" class="social-icon">
-							<img src="/icons/icon-social-github.svg" alt="github" class="social-icon __img"/>
+							<GitHubIcon class="social-icon" />
 						</a>
 					</Hexagon>
 					<Hexagon style="--color: #2ec262">
 						<a href="https://www.hackerrank.com/mloureiro/" target="_blank" class="social-icon">
-							<img src="/icons/icon-social-hackerrank.svg" alt="hackerrank" class="social-icon __img"/>
+							<HackerRankIcon class="social-icon" />
 						</a>
 					</Hexagon>
 				</HexagonRow>
 				<HexagonRow>
-						<Hexagon style="--color: #ea3854">
-							<a href="mailto:mloureiro.dev@gmail.com" target="_blank" class="social-icon">
-								<img src="/icons/icon-mail.svg" alt="mail" class="social-icon __img"/>
-							</a>
-						</Hexagon>
+					<Hexagon style="--color: #ea3854">
+						<a href="mailto:mloureiro.dev@gmail.com" target="_blank" class="social-icon">
+							<MailIcon class="social-icon" />
+						</a>
+					</Hexagon>
 
-						<Hexagon style="--color: #1d9bf0">
-							<a href="https://twitter.com/mloureiro_dev/" target="_blank" class="social-icon">
-								<img src="/icons/icon-social-twitter.svg" alt="twitter" class="social-icon __img"/>
-							</a>
-						</Hexagon>
+					<Hexagon style="--color: #1d9bf0">
+						<a href="https://twitter.com/mloureiro_dev/" target="_blank" class="social-icon">
+							<TwitterIcon class="social-icon" />
+						</a>
+					</Hexagon>
 				</HexagonRow>
 			</HexagonWrapper>
 	</main>
