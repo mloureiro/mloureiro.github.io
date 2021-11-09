@@ -5,5 +5,6 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
   renderers: ['@astrojs/renderer-vue'],
   buildOptions: {
     site: 'https://mloureiro.github.io',
+    sitemap: true,
   },
 });
