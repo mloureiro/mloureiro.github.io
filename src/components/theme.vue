@@ -28,7 +28,7 @@
 <script>
 export default {
 	data: () => ({
-		isLightTheme: true,
+		isLightTheme: false,
 	}),
 }
 </script>
