@@ -18,7 +18,14 @@ const { content } = Astro.props;
 </head>
 <body>
 <Theme client:load>
-	<div style="padding: var(--sp-m)">
+	<style>
+		.app-content {
+			padding: var(--sp-m);
+			max-width: 50rem;
+			margin: 0 auto;
+		}
+	</style>
+	<div class="app-content">
 		<slot />
 	</div>
 </Theme>

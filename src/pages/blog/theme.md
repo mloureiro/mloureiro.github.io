@@ -59,10 +59,10 @@ Task list
 
 ## Table
 
-| Header 1 | Header 2 |
-|----|----|
-| Content 1 | Content 2 |
-| More | Content |
+ Header 1 | Header 2 | Header 3
+----|----|----|
+ Content 1 | Content 2 | Content 3 
+ More | really large content | here
 
 ## Code blocks
 
