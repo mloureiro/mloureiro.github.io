@@ -57,7 +57,7 @@ pre {
 }
 
 blockquote {
-	padding: var(--sp-xs) var(--sp-m);
+	padding: var(--sp-xs) var(--sp-m) var(--sp-s);
 	border-left: var(--b-width-bold) var(--b-style) var(--c-primary-bg);
 	border-radius: var(--b-r-s);
 	font-family: var(--f-sans);
