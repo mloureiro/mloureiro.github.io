@@ -1,0 +1,121 @@
+/*** TEXT ***/
+h1 {
+	font-family: var(--f-cursive);
+	font-size: var(--f-s-xxl);
+	font-weight: var(--f-w-regular);
+	margin: var(--sp-l) 0 var(--sp-l);
+	text-align: center;
+}
+h2 {
+	font-family: var(--f-cursive);
+	font-size: var(--f-s-xl);
+	font-weight: var(--f-w-regular);
+	margin: var(--sp-l) 0 var(--sp-m);
+}
+h3 {
+	font-family: var(--f-sans);
+	font-size: var(--f-s-l);
+	font-weight: var(--f-w-medium);
+	margin: var(--sp-l) 0 var(--sp-m);
+}
+h4 {
+	font-family: var(--f-sans);
+	font-size: var(--f-s-s);
+	font-weight: var(--f-w-medium);
+	margin: var(--sp-l) 0 var(--sp-m);
+	text-transform: uppercase;
+}
+h1 + h4 {
+	margin-top: calc(-1.3 * var(--sp-m));
+	text-align: center;
+}
+h2 + h4 {
+	margin-top: calc(-1.5 * var(--sp-s));
+}
+h3 + h4 {
+	margin-top: calc(-1.5 * var(--sp-s));
+}
+strong { font-weight: var(--f-w-bold);}
+em { font-style: italic; }
+del {  text-decoration: line-through; }
+
+/*** text blocks ***/
+p {
+	margin-bottom: var(--sp-m);
+}
+
+code {
+	/* ensure the mono font doesn't look too large
+	in comparison to the other fonts */
+	font-size: 0.8em;
+}
+
+pre {
+	padding: var(--sp-m);
+	border-radius: var(--b-r-m);
+	background-color: var(--c-background-dark)
+}
+
+blockquote {
+	padding: var(--sp-xs) var(--sp-m);
+	border-left: var(--b-width-bold) var(--b-style) var(--c-primary-bg);
+	border-radius: var(--b-r-s);
+	font-family: var(--f-sans);
+	font-weight: var(--f-w-regular);
+	font-style: italic;
+}
+
+blockquote p:last-of-type {
+	margin-bottom: 0;
+}
+
+/*** lists ***/
+ol, ul {
+	padding-left: calc(1.5 * var(--sp-m));
+	margin: var(--sp-m) 0;
+}
+
+li > ol, li > ul {
+	margin: 0;
+}
+
+/*** misc ***/
+a[href] {
+	color: var(--c-primary-bg);
+}
+a[href]:hover {
+	color: var(--c-primary-bg-hover);
+}
+a[href]:active {
+	color: var(--c-primary-bg-active);
+}
+
+hr {
+	border-top: var(--b-standard-basic);
+	border-width: var(--b-width-regular) 0 0 0;
+	margin: var(--sp-l) auto var(--sp-l);
+	width: 80%;
+	text-align: center
+}
+
+/*** tables ***/
+table {
+	border-spacing: 0;
+}
+th, td {
+	padding: var(--sp-s) var(--sp-m);
+}
+th, td {
+	border-right: var(--b-standard-basic);
+	border-bottom: var(--b-standard-basic);
+}
+th {
+	border-bottom-width: var(--b-width-medium);
+}
+tr:last-of-type > td {
+	border-bottom: none;
+}
+tr > th:last-of-type,
+tr > td:last-of-type {
+	border-right: none;
+}

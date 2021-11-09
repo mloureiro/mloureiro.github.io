@@ -113,6 +113,35 @@ export default {
 	--b-r-m: 8px;
 	--b-r-l: 16px;
 
+	/*** common colors among themes ***/
+	--c-primary-fg: var(--palette-alice-blue);
+	--c-primary-bg: var(--palette-tangerine);
+	--c-primary-bg-hover: var(--palette-tangerine-light);
+	--c-primary-bg-active: var(--palette-tangerine-dark);
+	--c-secondary-fg: var(--palette-alice-blue);
+	--c-secondary-bg: var(--palette-dark-spring-green);
+	--c-secondary-bg-hover: var(--palette-dark-spring-green-light);
+	--c-secondary-bg-active: var(--palette-dark-spring-green-dark);
+	--c-success-fg: var(--palette-space-cadet);
+	--c-success-bg: var(--palette-emerald);
+	--c-success-bg-hover: var(--palette-emerald-light);
+	--c-success-bg-active: var(--palette-emerald-dark);
+	--c-danger-fg: var(--palette-alice-blue);
+	--c-danger-bg: var(--palette-rose-madder);
+	--c-danger-bg-hover: var(--palette-rose-madder-light);
+	--c-danger-bg-active: var(--palette-rose-madder-dark);
+	--c-warning-fg: var(--palette-space-cadet);
+	--c-warning-bg: var(--palette-selective-yellow);
+	--c-warning-bg-hover: var(--palette-selective-yellow-light);
+	--c-warning-bg-active: var(--palette-selective-yellow-dark);
+	--c-info-fg: var(--palette-space-cadet);
+	--c-info-bg: var(--palette-light-gray);
+	--c-info-bg-hover: var(--palette-light-gray-light);
+	--c-info-bg-active: var(--palette-light-gray-dark);
+	--c-link: var(--palette-manatee);
+	--c-link-hover: var(--palette-manatee-light);
+	--c-link-active: var(--palette-manatee-dark);
+
 	/*** base styles ***/
 	font-family: var(--f-sans);
 	font-size: 16px;
@@ -132,36 +161,12 @@ export default {
 	--c-text-light: var(--palette-space-cadet-light);
 	--c-text-dark: var(--palette-space-cadet-dark);
 	--c-background: var(--palette-alice-blue);
+	--c-background-dark: var(--palette-alice-blue-dark);
 	--c-text-inverted: var(--palette-alice-blue);
 	--c-background-inverted: var(--palette-tangerine);
 
 	--b-color: var(--palette-light-grayish-blue);
 	--b-standard-basic: var(--b-width-regular) var(--b-style) var(--b-color);
-
-	--c-primary-fg: var(--palette-alice-blue);
-	--c-primary-bg: var(--palette-tangerine);
-	--c-primary-bg-hover: var(--palette-tangerine-light);
-	--c-primary-bg-active: var(--palette-tangerine-dark);
-	--c-secondary-fg: var(--palette-alice-blue);
-	--c-secondary-bg: var(--palette-dark-spring-green);
-	--c-secondary-bg-hover: var(--palette-dark-spring-green-light);
-	--c-secondary-bg-active: var(--palette-dark-spring-green-dark);
-	--c-success-fg: var(--palette-space-cadet);
-	--c-success-bg: var(--palette-emerald);
-	--c-success-bg-hover: var(--palette-emerald-light);
-	--c-success-bg-active: var(--palette-emerald-dark);
-	--c-danger-fg: var(--palette-alice-blue);
-	--c-danger-bg: var(--palette-rose-madder);
-	--c-danger-bg-hover: var(--palette-rose-madder-light);
-	--c-danger-bg-active: var(--palette-rose-madder-dark);
-	--c-warning-fg: var(--palette-space-cadet);
-	--c-warning-bg: var(--palette-selective-yellow);
-	--c-warning-bg-hover: var(--palette-selective-yellow-light);
-	--c-warning-bg-active: var(--palette-selective-yellow-dark);
-	--c-info-fg: var(--palette-space-cadet);
-	--c-info-bg: var(--palette-light-gray);
-	--c-info-bg-hover: var(--palette-light-gray-light);
-	--c-info-bg-active: var(--palette-light-gray-dark);
 
 	/*** base styles ***/
 	color: var(--c-text);
@@ -173,36 +178,12 @@ export default {
 	--c-text-light: var(--palette-alice-blue-light);
 	--c-text-dark: var(--palette-alice-blue-dark);
 	--c-background: var(--palette-space-cadet);
+	--c-background-dark: var(--palette-space-cadet-dark);
 	--c-text-inverted: var(--palette-tangerine);
 	--c-background-inverted: var(--palette-alice-blue);
 
 	--b-color: var(--palette-light-grayish-blue);
 	--b-standard-basic: var(--b-width-regular) var(--b-style) var(--b-color);
-
-	--c-primary-fg: var(--palette-alice-blue);
-	--c-primary-bg: var(--palette-tangerine);
-	--c-primary-bg-hover: var(--palette-tangerine-light);
-	--c-primary-bg-active: var(--palette-tangerine-dark);
-	--c-secondary-fg: var(--palette-alice-blue);
-	--c-secondary-bg: var(--palette-dark-spring-green);
-	--c-secondary-bg-hover: var(--palette-dark-spring-green-light);
-	--c-secondary-bg-active: var(--palette-dark-spring-green-dark);
-	--c-success-fg: var(--palette-space-cadet);
-	--c-success-bg: var(--palette-emerald);
-	--c-success-bg-hover: var(--palette-emerald-light);
-	--c-success-bg-active: var(--palette-emerald-dark);
-	--c-danger-fg: var(--palette-alice-blue);
-	--c-danger-bg: var(--palette-rose-madder);
-	--c-danger-bg-hover: var(--palette-rose-madder-light);
-	--c-danger-bg-active: var(--palette-rose-madder-dark);
-	--c-warning-fg: var(--palette-space-cadet);
-	--c-warning-bg: var(--palette-selective-yellow);
-	--c-warning-bg-hover: var(--palette-selective-yellow-light);
-	--c-warning-bg-active: var(--palette-selective-yellow-dark);
-	--c-info-fg: var(--palette-space-cadet);
-	--c-info-bg: var(--palette-light-gray);
-	--c-info-bg-hover: var(--palette-light-gray-light);
-	--c-info-bg-active: var(--palette-light-gray-dark);
 
 	/*** base styles ***/
 	color: var(--c-text);
