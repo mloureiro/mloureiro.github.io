@@ -47,7 +47,8 @@ p {
 code {
 	/* ensure the mono font doesn't look too large
 	in comparison to the other fonts */
-	font-size: 0.8em;
+	font-size: 0.8em !important;
+	font-family: var(--f-mono) !important;
 }
 
 pre {
