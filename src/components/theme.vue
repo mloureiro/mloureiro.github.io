@@ -239,7 +239,9 @@ export default {
 }
 
 .theme-toggle.__icon {
-	width: calc(0.8 * var(--toggle-height))
+	--icon-size: calc(0.8 * var(--toggle-height));
+	width: var(--icon-size);
+	height: var(--icon-size);
 }
 
 .theme-toggle.__checkbox {
