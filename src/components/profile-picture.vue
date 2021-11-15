@@ -1,14 +1,14 @@
 <template>
-	<div class="profile-picture">
+	<div class="profile-picture __wrapper">
 		<img
-			src="/assets/profile-picture.png"
+			src="/assets/profile-picture.jpeg"
 			class="profile-picture __img"
 		/>
 	</div>
 </template>
 
 <style scoped>
-.profile-picture {
+.profile-picture.__wrapper {
 	display: inline-flex;
 	overflow: hidden;
 	padding: var(--sp-xs);
