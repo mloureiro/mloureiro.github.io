@@ -23,6 +23,8 @@ cp -Ra dist/* .
 
 # add .nojekyll to bypass GitHub Page's default behavior
 touch .nojekyll
+# add CNAME for custom domain
+echo "www.loureiro.me" > CNAME
 
 # commit and push changes
 git add .
