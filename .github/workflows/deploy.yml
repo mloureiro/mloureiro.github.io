@@ -27,8 +27,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          # Astro 0.20 / snowpack stack does not build on newer Node
-          node-version: 16
+          node-version: 22
           cache: npm
 
       - name: Install dependencies

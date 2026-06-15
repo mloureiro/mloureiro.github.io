@@ -1,7 +1,7 @@
 ---
 import Theme from '../components/theme.vue';
 
-const { content } = Astro.props;
+const { frontmatter } = Astro.props;
 ---
 
 <html lang="en">
@@ -9,7 +9,7 @@ const { content } = Astro.props;
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width" />
 
-	<title>{content.title} • Marcos</title>
+	<title>{frontmatter.title} • Marcos</title>
 
 	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 

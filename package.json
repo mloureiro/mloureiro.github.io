@@ -1,14 +1,19 @@
 {
-  "name": "@example/starter",
+  "name": "loureiro-me",
   "version": "0.0.1",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "astro": "astro"
   },
-  "devDependencies": {
-    "astro": "^0.20.12"
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
+    "@astrojs/vue": "^6.0.1",
+    "astro": "^6.4.7",
+    "vue": "^3.5.38"
   }
 }
